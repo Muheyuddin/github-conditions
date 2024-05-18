@@ -8,7 +8,7 @@
   "numFailedTests": 0,
   "numPendingTests": 0,
   "numTodoTests": 0,
-  "startTime": 1716039149250,
+  "startTime": 1716040526017,
   "success": true,
   "testResults": [
     {
@@ -21,7 +21,7 @@
           "fullName": " MainContent should render a button",
           "status": "passed",
           "title": "should render a button",
-          "duration": 71,
+          "duration": 56,
           "failureMessages": []
         },
         {
@@ -32,12 +32,12 @@
           "fullName": " MainContent should show the help area after clicking the button",
           "status": "passed",
           "title": "should show the help area after clicking the button",
-          "duration": 48,
+          "duration": 71,
           "failureMessages": []
         }
       ],
-      "startTime": 1716039152022,
-      "endTime": 1716039152141,
+      "startTime": 1716040528098,
+      "endTime": 1716040528225,
       "status": "passed",
       "message": "",
       "name": "C:/Users/muhey/Desktop/git-if-condition/src/components/MainContent.test.jsx"
