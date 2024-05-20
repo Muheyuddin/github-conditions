@@ -4,7 +4,9 @@ on:
         branches:
             - main
 jobs:
-    Deploy:  
+  
+    Deploy: 
+     continue-on-error: true   
      strategy:
             matrix:
                 node-version: [12,14,16]
