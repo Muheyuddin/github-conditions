@@ -33,3 +33,8 @@ jobs:
           
         - name: Build Project
           run: npm run build  
+
+          
+    deploy-Job:
+        needs: Deploy
+        uses: ./github/workflows/resuable-workflow.yml
