@@ -73,16 +73,9 @@ jobs:
           path: dist
   deploy:
     needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get build artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: dist-files
-      - name: Output contents
-        run: ls
-      - name: Deploy
-        run: echo "Deploying..."
+    uses: ./.github/workflows/resuable-workflow.yml
+    with:
+       artifact-name: dist-files
 
   report:
    needs: [lint,deploy] 
