@@ -1,6 +1,7 @@
 name: Resuable Workflow
-on: workflow_call
-      inputs:
+on: 
+  workflow_call:
+     inputs:
         artifact-name:
           description: The name of the deployable artifact.
           required: true
