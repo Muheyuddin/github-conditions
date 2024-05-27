@@ -1,5 +1,12 @@
 name: Resuable Workflow
 on: workflow_call
+      inputs:
+        artifact-name:
+          description: The name of the deployable artifact.
+          required: true
+          default: dist
+          type: string
+
 jobs:
     deploymentboy:
         runs-on: ubuntu-latest
@@ -9,7 +16,9 @@ jobs:
          - name: Get Code
            uses: actions/download-artifact@v3
            with:
-                name: disc-files   
+                name: ${{inputs.artifact-name}} 
 
+         - name: List Files
+           run: ls       
          - name: Output Information
            run: echo "deploying & uploading..."   
