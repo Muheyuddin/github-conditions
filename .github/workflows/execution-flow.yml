@@ -76,7 +76,13 @@ jobs:
     uses: ./.github/workflows/resuable-workflow.yml
     with:
        artifact-name: dist-files
-    
+  
+  OutputData:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Output Data from Resuable Workflow.yml File
+        run: echo "The data is = ${{needs.deploy.outputs.result}}"     
 
   report:
    needs: [lint,deploy] 

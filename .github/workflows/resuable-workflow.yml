@@ -14,8 +14,10 @@ on:
 
 jobs:
     deploymentboy:
-        
+       
         runs-on: ubuntu-latest
+        outputs:
+           resultoutput: ${{steps.set-result.outputs.set-result}}
 
         steps:
 
@@ -33,5 +35,4 @@ jobs:
            id: set-result
            run: echo "set-result=success" >> $GITHUB_OUTPUT  
 
-         - name: Show me Output
-           run: echo "The result is ${{steps.set-result.outputs.set-result}}"
+         
