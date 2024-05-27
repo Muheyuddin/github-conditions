@@ -34,4 +34,4 @@ jobs:
            run: echo "set-result=success" >> $GITHUB_OUTPUT  
 
          - name: Show me Output
-           run: echo "The output is" + ${{steps.set-result.outputs.GITHUB_OUTPUT}}
+           run: echo "The result is ${{steps.set-result.outputs.set-result}}"
