@@ -7,10 +7,10 @@ on:
           required: true
           default: dist
           type: string
-
-     
-      
-
+     outputs:
+       result:
+        description: This is the output we are sending.  
+        value: ${{jobs.deploymentboy.outputs.resultoutput}}   
 
 jobs:
     deploymentboy:
