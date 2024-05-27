@@ -8,9 +8,7 @@ on:
           default: dist
           type: string
 
-     secrets:
-       some-secret:
-        required: true
+     
       
 
 
