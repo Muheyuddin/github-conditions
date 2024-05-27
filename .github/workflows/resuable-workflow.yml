@@ -8,8 +8,15 @@ on:
           default: dist
           type: string
 
+     secrets:
+       some-secret:
+        required: true
+      
+
+
 jobs:
     deploymentboy:
+        
         runs-on: ubuntu-latest
 
         steps:
@@ -23,3 +30,10 @@ jobs:
            run: ls       
          - name: Output Information
            run: echo "deploying & uploading..."   
+
+         - name: Set Result Output
+           id: set-result
+           run: echo "set-result=success" >> $GITHUB_OUTPUT  
+
+         - name: Show me Output
+           run: echo "The output is" + ${{steps.set-result.outputs.GITHUB_OUTPUT}}
